@@ -57,13 +57,15 @@
 
 }
 .intro img{
-    float: right;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 50%;
 }
 .back h1{
-    text-align: center;
+    text-align: left;
     float: center;
-    color: #bf0603;
+    color: black;
 }
 .favourite {
 flex-wrap: wrap;
@@ -135,6 +137,12 @@ td, th {
   text-align: left;
   padding: 8px;
 }
+.History {
+    text-align: center;
+}
+.white {
+    color: white;
+}
 
     </style>
 </head>
@@ -142,9 +150,9 @@ td, th {
     <div class="container" >
         <div class="header" style="background-image: url(https://thumbs.dreamstime.com/b/mountains-clouds-black-white-kerry-ireland-table-mountain-top-173954625.jpg);">
          <ul class="menu">
-            <li><a href="#" >Home</a></li>
-            <li><a href="#" >Portfolio</a></li>
-            <li><a href="#" >Blog</a></li>
+            <li><a href="#" >Historical</a></li>
+            <li><a href="#" >City</a></li>
+            <li><a href="#" >Language</a></li>
          </ul>
         
         </div>
@@ -153,23 +161,28 @@ td, th {
             <div class="content" >
                 <div class="intro">
                     <div class="back" style="background-image: url(https://www.researchgate.net/profile/Sharone-Tomer/publication/262099992/figure/fig1/AS:353910628864000@1461390277020/Cape-Town-nestled-up-the-slopes-of-Table-Mountain-Source_Q320.jpg);">
+                        <h1>Hello World!,I am Mandisa Masikane</h1>
                         <img src="C:\Users\Home\Downloads\WhatsApp Image 2023-03-03 at 4.20.09 PM.jpeg" alt="Trulli" width="200" height="">
-                        <h1>Hello World!,I am Mandisa Masikae</h1>
+                    
                     </div>
                   
                 </div>
                 <div class="City allinall">
-                    <h3>City of Cape Town</h3>
+                    <div class="History white">
+                    <h2>City of Cape Town</h2>
+                    </div>
                     <div class="City">
 
-                    <img src="https://cache.marriott.com/marriottassets/marriott/CPTBR/cptbr-attraction-waterfront-0017-hor-feat.jpg?downsize=1024px:*" alt="Girl in a jacket" width="200" height="">
+                    <img src="https://cache.marriott.com/marriottassets/marriott/CPTBR/cptbr-attraction-waterfront-0017-hor-feat.jpg?downsize=1024px:*" alt="Girl in a jacket" width="200" height="200">
                     </div>
-                   <div class="favourate">
+                   <div class="favourate white">
                      <p>The southernmost tip of Africa,Cape Town is one of the most magnificent parts of the world, a paradise full of exquisite scenery, beautiful beaches, two oceans the icy Atlantic and the warmer Indian Ocean and a wide variety of attractions to make any holiday-maker happy. I cannot wait to experience swimming with the penguines at Boulders beach, rock climbing the Lion's Head and watching the sunset in Signalhill and also not excluding the Champmans peak drive.</p>
                    </div>
                 </div>
                 <div class="foreign allinall">
-                    <h3>Foreign language</h3>
+                    <div class="History">
+                    <h2>Foreign language</h2>
+                    </div>
                     <div>
                     A foreign language I would like to learn is french or language francaise which is the only legal language spoken in france. I would like to work outside the country in the next coming years and the country I would like to work at is currently Paris,France.
                     </div>
@@ -198,12 +211,14 @@ td, th {
 
                 </div>
                 <div>
-                    <h3>Historical places in Johannesburg</h3>
+                    <div class="History white">
+                    <h2>Historical places in Johannesburg</h2>
+                    </div>
                     
                 <div class="Historicals">
                     
                     <div class="Gold allinall">
-                        <h4>Gold reef City theme Park</h4>
+                        <h3>Gold reef City theme Park</h3>
                         <div class="wrap">
                         <img src="https://res.cloudinary.com/hynomj8e0/image/upload/c_fit,w_1200,h_1200/kiducnrhpw3unfgnmgkg.jpg" alt="Flowers in Chania" width="200" height="">
                         </div>
@@ -213,7 +228,7 @@ td, th {
 
                     </div>
                     <div class=" vilakazi allinall">
-                        <h4>Vilakazi Street</h4>
+                        <h3>Vilakazi Street</h3>
                         <div class="wrap">
                         <img src="http://cdn.primedia.co.za/primedia-broadcasting/image/upload/c_fill,w_847/j0enrkgyzgbo5zyc7ppg" alt="Vilakazi" width="200" height="">
                         </div>
@@ -225,7 +240,7 @@ td, th {
 
                     </div>
                      <div class="Victoria allinall">
-                        <h4>Victoria Yards</h4>
+                        <h3>Victoria Yards</h3>
                         <div class="wrap">
                         <img src="https://lh3.googleusercontent.com/L1FXk23bLQj-dMdr2WEAtfSjrmujGDpwyQdWMQ8CrCtIdwKrczCwHr5t3_eYhBkp3XUPEcYOADTvXFzZFNZmr6OoJ9q1D6ey=s1500-pp" alt="Victoria" width="200" height="">
                         </div>
@@ -241,13 +256,6 @@ td, th {
             </div>
         </div>
         <div class="footer" >
-            
-                <button>Default Button</button>
-                <a href="#" class="button">Link Button</a>
-                <button class="button">Button</button>
-                <input type="button" class="button" value="Input Button">
-
-        
         </div>
     </div>
 </body>
