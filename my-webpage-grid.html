@@ -5,17 +5,181 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="simple-grid1.scss" /> 
+    <link rel="stylesheet" type="text/css" href="simple-grid1.scss" />
+    
     <style>
-        .col-1 {
-            background-color: blueviolet;
-        }
+   @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+
+
+   .font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-heavy {
+  font-weight:700;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+  background-color: #333447;
+}
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media only screen and (min-width: 33.75em) {
+    width: 80%;
+    
+  }
+
+  @media only screen and (min-width: 60em) {
+    width: 75%;
+    max-width: 60rem;
+    
+  }
+}
+* {
+  font-family: 'Lato', Helvetica, sans-serif;
+  color:  black;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.8;
+}
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-1 {
+height: 400px;
+background-position: center;
+background-size: cover;
+}
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 96%;
+}
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+.hidden-sm {
+  display: none;
+}
+
+.col-1-sm { width:(96% / 12) - (4% * 11 / 12); }
+.col-2-sm { width: ($width / 6) - ($gutter * 10 / 12); }
+.col-3-sm { width: ($width / 4) - ($gutter * 9 / 12); }
+.col-4-sm { width: ($width / 3) - ($gutter * 8 / 12); }
+.col-5-sm { width: ($width / (12 / 5)) - ($gutter * 7 / 12); }
+.col-6-sm { width: ($width / 2) - ($gutter * 6 / 12); }
+.col-7-sm { width: ($width / (12 / 7)) - ($gutter * 5 / 12); }
+.col-8-sm { width: ($width / (12 / 8)) - ($gutter * 4 / 12); }
+.col-9-sm { width: ($width / (12 / 9)) - ($gutter * 3 / 12); }
+.col-10-sm { width: ($width / (12 / 10)) - ($gutter * 2 / 12); }
+.col-11-sm { width: ($width / (12 / 11)) - ($gutter * 1 / 12); }
+.col-12-sm { width: $width; }
+
+@media only screen and (min-width: 45em) {
+  .col-1 { width:(96% / 12) - (4% * 11 / 12); }
+  .col-2 { width: ($width / 6) - ($gutter * 10 / 12); }
+  .col-3 { width: ($width / 4) - ($gutter * 9 / 12); }
+  .col-4 { width: (96% / 3) - (4% * 8 / 12); }
+  .col-5 { width: ($width / (12 / 5)) - ($gutter * 7 / 12); }
+  .col-6 { width: ($width / 2) - ($gutter * 6 / 12); }
+  .col-7 { width: ($width / (12 / 7)) - ($gutter * 5 / 12); }
+  .col-8 { width: ($width / (12 / 8)) - ($gutter * 4 / 12); }
+  .col-9 { width: ($width / (12 / 9)) - ($gutter * 3 / 12); }
+  .col-10 { width: ($width / (12 / 10)) - ($gutter * 2 / 12); }
+  .col-11 { width: ($width / (12 / 11)) - ($gutter * 1 / 12); }
+  .col-12 { width: $width; }
+
+  .hidden-sm {
+    display: block;
+  }
+  
+}
+
+
 
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="row" style="background-image: url(https://thumbs.dreamstime.com/b/mountains-clouds-black-white-kerry-ireland-table-mountain-top-173954625.jpg);" >
+        <div class="row" >
             
                 <ul class="menu">
                    <li><a href="#" >Historical</a></li>
@@ -26,31 +190,93 @@
             
         </div>
 
+       
         <div class="row">
+            <div class="col-1" style="background-image: url(https://www.westend61.de/images/0001591344pw/aerial-view-of-bakoven-with-table-mountain-in-background-cape-town-south-africa-AAEF12033.jpg);">
+                <h1>Hi Mandisa here..</h1>
+                <div class="col-2 ">
+                <img src="IMG_20230313_183256_055.jpg" alt="" width="200" height="">
+                </div>
+            
+            </div>
+        </div>
+        <div class="row">
+            <div class="City allinall">
+                    <div class="center">
+                    <h2>City of Cape Town</h2>
+                    </div>
+                    <div class="City">
+
+                    <img src="https://cache.marriott.com/marriottassets/marriott/CPTBR/cptbr-attraction-waterfront-0017-hor-feat.jpg?downsize=1024px:*" alt="Girl in a jacket" width="" height="200">
+                    </div>
+                   <div class="favourate white">
+                     <p>The southernmost tip of Africa,Cape Town is one of the most magnificent parts of the world, a paradise full of exquisite scenery, beautiful beaches, two oceans the icy Atlantic and the warmer Indian Ocean and a wide variety of attractions to make any holiday-maker happy. I cannot wait to experience swimming with the penguines at Boulders beach, rock climbing the Lion's Head and watching the sunset in Signalhill and also not excluding the Champmans peak drive.</p>
+                   </div>
+                </div>
             
 
         </div>
         <div class="row">
-          <div class="col-1">
+            <div class="foreign">
+                    <div class="center">
+                    <h2>Foreign language</h2>
+                    </div>
+                    <div>
+                    <p>A foreign language I would like to learn is french or language francaise which is the only legal language spoken in france. I would like to work outside the country in the next coming years and the country I would like to work at is currently Paris,France.</p>
+                    </div>
+                    
+                    <table style = "width:100%",border="1">
+                     <tr>
+                     <th>English</th>
+                     <th>Franciase</th>
+                     </tr>
+        
+                     <tr>
+                    <td>good morning</td>
+                    <td>bonjour</td>
+                    </tr>
+                    <tr>
+                    <td>how are you</td>
+                    <td>comment allez-vous</td>
+                    </tr>
+                    <tr>
+                    <td>I am good</td>
+                    <td>je vais bien</td>
+                    </tr>
+                   </table>
+                    
+                </div>
+                
+
+                </div>
+        </div>
+        <div class="row ">
+          <div class="col-4 center justify">
+            <div class="center">
+            <h2>Historical Places</h2>
+            </div>
+            
             <h3>Gold reef City theme Park</h3>
                         
                         <img src="https://res.cloudinary.com/hynomj8e0/image/upload/c_fit,w_1200,h_1200/kiducnrhpw3unfgnmgkg.jpg" alt="Flowers in Chania" width="200" height="">
                         <div>
-                            is an amusement park in Johannesburg, South Africa. Located on an old gold mine which closed in 1971,[1] the park is themed around the gold rush that started in 1886 on the Witwatersrand, the buildings on the park are designed to mimic the same period. There is a museum dedicated to gold mining on the grounds where it is possible to see a gold-containing ore vein and see how gold is poured into barrels. And multiple shops around the park can be located.
+                            <p>is an amusement park in Johannesburg, South Africa. Located on an old gold mine which closed in 1971,[1] the park is themed around the gold rush that started in 1886 on the Witwatersrand, the buildings on the park are designed to mimic the same period. There is a museum dedicated to gold mining on the grounds where it is possible to see a gold-containing ore vein and see how gold is poured into barrels. And multiple shops around the park can be located.</p>
                         </div>
             
           </div>
-          <div class="col-1">
-            <img src="https://res.cloudinary.com/hynomj8e0/image/upload/c_fit,w_1200,h_1200/kiducnrhpw3unfgnmgkg.jpg" alt="Flowers in Chania" width="200" height="">
+          <div class="col-4 justify">
+            <h3>Vilakazi Street</h3>
+            <img src="http://cdn.primedia.co.za/primedia-broadcasting/image/upload/c_fill,w_847/j0enrkgyzgbo5zyc7ppg" alt="Flowers in Chania" width="200" height="">
                         <div>
-                            is an amusement park in Johannesburg, South Africa. Located on an old gold mine which closed in 1971,[1] the park is themed around the gold rush that started in 1886 on the Witwatersrand, the buildings on the park are designed to mimic the same period. There is a museum dedicated to gold mining on the grounds where it is possible to see a gold-containing ore vein and see how gold is poured into barrels. And multiple shops around the park can be located.
+                            <p>is an amusement park in Johannesburg, South Africa. Located on an old gold mine which closed in 1971,[1] the park is themed around the gold rush that started in 1886 on the Witwatersrand, the buildings on the park are designed to mimic the same period. There is a museum dedicated to gold mining on the grounds where it is possible to see a gold-containing ore vein and see how gold is poured into barrels. And multiple shops around the park can be located.</p>
                         </div>
            
           </div>
-          <div class="col-1">
-            <img src="https://res.cloudinary.com/hynomj8e0/image/upload/c_fit,w_1200,h_1200/kiducnrhpw3unfgnmgkg.jpg" alt="Flowers in Chania" width="200" height="">
+          <div class="col-4 justify">
+            <h3>Victoria Yards</h3>
+            <img src="https://lh3.googleusercontent.com/L1FXk23bLQj-dMdr2WEAtfSjrmujGDpwyQdWMQ8CrCtIdwKrczCwHr5t3_eYhBkp3XUPEcYOADTvXFzZFNZmr6OoJ9q1D6ey=s1500-pp" alt="Flowers in Chania" width="200" height="">
                         <div>
-                            is an amusement park in Johannesburg, South Africa. Located on an old gold mine which closed in 1971,[1] the park is themed around the gold rush that started in 1886 on the Witwatersrand, the buildings on the park are designed to mimic the same period. There is a museum dedicated to gold mining on the grounds where it is possible to see a gold-containing ore vein and see how gold is poured into barrels. And multiple shops around the park can be located.
+                            <p>is an amusement park in Johannesburg, South Africa. Located on an old gold mine which closed in 1971,[1] the park is themed around the gold rush that started in 1886 on the Witwatersrand, the buildings on the park are designed to mimic the same period. There is a museum dedicated to gold mining on the grounds where it is possible to see a gold-containing ore vein and see how gold is poured into barrels. And multiple shops around the park can be located.</p>
                         </div>
             
           </div>
